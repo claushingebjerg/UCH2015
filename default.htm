@@ -1,0 +1,78 @@
+Bekrivelse af kursus.uch.dk
+
+
+Backend
+Kurser importeres via W005 KursusudbudViaWeb webservicen udbudt af Uni-C  
+(http://www.admsys.uni-c.dk/EASY-A/Webservices#W005 KursusudbudViaWeb)
+
+Kurserne importeres som noder i umbraco, og danner her grundlag for de enkelte kursussider.
+
+
+
+Det er muligt at definere følgende elementer på et kursus.
+
+	Kursus artikel				Tab
+		Billede					Image picker
+		Artikeltekst				Rich text Editor
+
+
+
+	SEO						Tab
+		Meta Description				Textfelt multi
+		Title					Textfelt
+		Caconical url				Content picker
+
+
+	
+Følgende felter importeres fra webservicen, og kan efterfølgende redigeres i Umbraco:
+	
+	Kursus data					Tab
+		Kursus type: IV-kursus, Amu, Ludus	Radio button list
+		Kviknummer				Textfelt
+		Amu-pris					Textfelt
+		Pris uden for målgruppe			Textfelt
+		Relaterede kurser				Related links datatype
+
+
+I niveauet under et givent kursus importeres x antal hold. 
+Disse hold er defineret i webservice xml’en.
+Det er også mulig manuelt at oprette hold under et kursus.
+
+Et hold indeholder følgende felter:
+	Hold						Tab
+		Holdnavn					Nodens navn
+		Aflyst					Checkfelt
+		Skole					Dropdown
+		Startdato					Dato picker
+		Slutdato					Dato picker
+		Tilmeldingsfrist				Dato picker
+		Beskrivelse				Textfelt multi
+		Kontaktperson				Textfelt
+		Kontakt telefon				Textfelt
+		Udbudt antal pladser			Textfelt
+		Optaget antal pladser			Textfelt
+
+
+
+
+
+· Priser beregnes ud fra takstfil leveret fra ministeriet.
+· Relaterede filer til alle AMU kurser defineres globalt, og kan overrides på det enkelte kursus.
+· Generelle relevante links kan defineres globalt, og overrides på det enkelte kursus.
+
+Frontend
+Ledige/optagede kurser skal indikeres bådes grafisk og med tekst “Ikke flere ledige pladser“ “ledige pladser“, “+10 ledige pladser”
+
+Der oprettes mulighed for at finde kurset direkte ved søgning på Kviknummer, eks “280052k14ku33-40av“
+Kviknummeret importeres fra Easy web servicen.
+
+Det gøres muligt at administrere canonical på den enekelte side/kursus.
+Det gøres muligt
+
+Der tilrettes således, at der kan tilmeldes direkte via klik på kursusdatoen.
+
+
+
+
+
+
